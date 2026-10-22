@@ -1,284 +1,107 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080808">
-  <meta name="description" content="Official personal website of Maruf Ahmed.">
-  <title>Maruf Ahmed | Official Website</title>
-
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: #080808;
-      color: #f5f5f5;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .container {
-      width: min(1050px, 90%);
-      margin: auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(8,8,8,.96);
-      border-bottom: 1px solid #292929;
-    }
-
-    nav {
-      min-height: 72px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .logo {
-      font-size: 17px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      white-space: nowrap;
-    }
-
-    .links {
-      display: flex;
-      gap: 16px;
-      font-size: 12px;
-    }
-
-    .links a:hover { color: #aaa; }
-
-    .hero { padding: 75px 0 90px; }
-
-    .profile {
-      width: 125px;
-      height: 125px;
-      border-radius: 50%;
-      border: 2px solid #555;
-      object-fit: cover;
-      object-position: center;
-      margin-bottom: 28px;
-      background: #171717;
-    }
-
-    .eyebrow {
-      color: #aaa;
-      font-size: 11px;
-      letter-spacing: 3px;
-    }
-
-    h1 {
-      font-size: clamp(43px, 9vw, 82px);
-      line-height: 1.1;
-      letter-spacing: -2px;
-      margin: 18px 0;
-    }
-
-    h1 span { color: #858585; }
-
-    .intro {
-      max-width: 560px;
-      color: #c5c5c5;
-      font-size: 16px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 26px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 11px 17px;
-      border: 1px solid #777;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    .btn.white {
-      background: #fff;
-      color: #080808;
-      border-color: #fff;
-    }
-
-    section {
-      padding: 65px 0;
-      border-top: 1px solid #292929;
-      scroll-margin-top: 75px;
-    }
-
-    .label {
-      color: #999;
-      font-size: 11px;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-    }
-
-    h2 {
-      font-size: clamp(30px, 6vw, 43px);
-      margin-bottom: 18px;
-    }
-
-    .description {
-      max-width: 700px;
-      color: #bbb;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 15px;
-      margin-top: 25px;
-    }
-
-    .card {
-      padding: 24px;
-      background: #121212;
-      border: 1px solid #303030;
-    }
-
-    .card h3 { margin-bottom: 8px; }
-    .card p { color: #aaa; font-size: 14px; }
-
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 25px;
-    }
-
-    footer {
-      border-top: 1px solid #292929;
-      padding: 24px 0;
-      color: #888;
-      font-size: 12px;
-    }
-
-    @media (max-width: 540px) {
-      nav { align-items: flex-start; flex-direction: column; padding: 14px 0; }
-      .links { gap: 14px; flex-wrap: wrap; }
-      .hero { padding: 55px 0 65px; }
-      .grid { grid-template-columns: 1fr; }
-      .profile { width: 108px; height: 108px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="The personal website of Maruf Ahmed — student, entrepreneur, and public speaker.">
+<title>Maruf Ahmed | Personal Website</title>
+<style>
+:root{--bg:#090909;--panel:#111;--text:#f6f6f6;--muted:#a7a7a7;--line:#292929;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1100px,90%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:rgba(9,9,9,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;justify-content:space-between;align-items:center;min-height:74px;gap:20px}
+.brand{font-size:1rem;font-weight:800;letter-spacing:.14em}
+nav{display:flex;gap:25px;color:#c9c9c9;font-size:.88rem}
+nav a:hover,.text-link:hover{color:white}
+.hero{min-height:82vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:60px;padding:76px 0}
+.eyebrow{color:#b9b9b9;text-transform:uppercase;letter-spacing:.24em;font-size:.75rem;font-weight:700}
+h1{font-size:clamp(3rem,8vw,6.4rem);line-height:.98;letter-spacing:-.065em;margin:22px 0}
+h1 span{color:#8f8f8f}
+.intro{max-width:570px;color:#bdbdbd;font-size:1.05rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border:1px solid #f1f1f1;border-radius:4px;font-weight:700;font-size:.9rem;transition:.2s}
+.btn.primary{background:#f4f4f4;color:#111}
+.btn:hover{transform:translateY(-2px);opacity:.85}
+.photo-frame{position:relative;max-width:410px;width:100%;justify-self:end;padding:12px;border:1px solid #383838}
+.photo-frame:before{content:"";position:absolute;inset:24px -12px -12px 24px;border:1px solid #343434;z-index:-1}
+.profile{display:block;width:100%;height:510px;object-fit:cover;object-position:center 25%;filter:grayscale(100%);background:#222}
+.photo-caption{display:flex;justify-content:space-between;gap:10px;padding-top:12px;color:#a8a8a8;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+section{padding:88px 0;border-top:1px solid var(--line)}
+.section-head{display:grid;grid-template-columns:.65fr 1.35fr;gap:35px;margin-bottom:38px}
+.kicker{color:#8f8f8f;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase}
+h2{font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.045em;line-height:1.1}
+.section-copy{color:#b7b7b7;max-width:700px;font-size:1.05rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{padding:25px;border:1px solid var(--line);background:linear-gradient(145deg,#141414,#0b0b0b);min-height:190px}
+.card .num{color:#777;font-size:.8rem;letter-spacing:.14em}
+.card h3{font-size:1.18rem;margin:22px 0 9px}
+.card p{color:#a8a8a8;font-size:.92rem}
+.quote{font-size:clamp(1.5rem,4vw,2.8rem);line-height:1.3;letter-spacing:-.035em;max-width:850px}
+.quote span{color:#777}
+.contact-row{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+footer{padding:25px 0;color:#777;font-size:.8rem;border-top:1px solid var(--line)}
+.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:760px){.nav{min-height:65px}nav{gap:13px;font-size:.78rem}.hero{grid-template-columns:1fr;gap:38px;padding:65px 0}.photo-frame{justify-self:start;max-width:370px}.profile{height:440px}.section-head{grid-template-columns:1fr;gap:15px}.cards{grid-template-columns:1fr}.card{min-height:150px}section{padding:65px 0}}
+@media(max-width:420px){.brand{font-size:.8rem}nav{gap:9px}.profile{height:390px}}
+</style>
 </head>
-
 <body>
-  <header>
-    <nav class="container">
-      <a class="logo" href="#home">MARUF AHMED.</a>
-      <div class="links">
-        <a href="#about">About</a>
-        <a href="#journey">Journey</a>
-        <a href="#vision">Vision</a>
-        <a href="#contact">Contact</a>
-      </div>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">MARUF AHMED<span style="color:#777">.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a><a href="#journey">Journey</a><a href="#vision">Vision</a><a href="#contact">Contact</a>
     </nav>
-  </header>
-
-  <main>
-    <div class="container hero" id="home">
-      <!-- Add your profile.jpg file in the next step -->
-      <img class="profile" src="profile.jpg"
-           alt="Maruf Ahmed"
-           onerror="this.style.display='none'">
-
-      <p class="eyebrow">STUDENT · ENTREPRENEUR</p>
-
+  </div>
+</header>
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <p class="eyebrow">A little about me</p>
       <h1>MARUF<br><span>AHMED.</span></h1>
-
-      <p class="intro">
-        Welcome to my personal space. I believe in learning,
-        building meaningful things and creating my own journey.
-      </p>
-
-      <div class="actions">
-        <a class="btn white" href="#about">DISCOVER MY STORY ↗</a>
-        <a class="btn" href="#contact">LET'S CONNECT</a>
+      <p class="intro">Student · Entrepreneur · Public Speaker<br><br>Learning every day, building with purpose, and believing that a meaningful future begins with small steps taken consistently.</p>
+      <div class="actions"><a class="btn primary" href="#about">Explore my story ↘</a><a class="btn" href="#contact">Get in touch</a></div>
+    </div>
+    <div class="photo-frame">
+      <img class="profile" src="profile.jpg" alt="Portrait of Maruf Ahmed">
+      <div class="photo-caption"><span>Personal profile</span><span>Est. in progress</span></div>
+    </div>
+  </div>
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head"><p class="kicker">01 / About</p><div><h2>Quiet ambition.<br>Clear intention.</h2></div></div>
+      <p class="section-copy">I’m Maruf Ahmed. I’m a student with an interest in entrepreneurship, communication, and personal growth. I believe in staying curious, treating people with respect, and improving a little every day.</p>
+    </div>
+  </section>
+  <section id="journey">
+    <div class="wrap">
+      <div class="section-head"><p class="kicker">02 / The journey</p><div><h2>Still learning.<br>Always moving forward.</h2></div></div>
+      <div class="cards">
+        <article class="card"><span class="num">01 — LEARN</span><h3>Student mindset</h3><p>Building knowledge, strengthening skills, and staying open to new ideas.</p></article>
+        <article class="card"><span class="num">02 — BUILD</span><h3>Entrepreneurial spirit</h3><p>Exploring ideas, solving everyday problems, and turning lessons into action.</p></article>
+        <article class="card"><span class="num">03 — SPEAK</span><h3>Communication</h3><p>Finding the confidence to share ideas, listen well, and connect with people.</p></article>
       </div>
     </div>
-
-    <section id="about">
-      <div class="container">
-        <p class="label">01 — ABOUT ME</p>
-        <h2>A little about me.</h2>
-        <p class="description">
-          I am Maruf Ahmed, a student and aspiring entrepreneur
-          from Bangladesh. I am interested in personal growth,
-          business, communication and learning new skills.
-          This website shares my identity, interests and journey.
-        </p>
-      </div>
-    </section>
-
-    <section id="journey">
-      <div class="container">
-        <p class="label">02 — MY JOURNEY</p>
-        <h2>Learn. Grow. Build.</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Education</h3>
-            <p>Building knowledge, developing skills and learning every day.</p>
-          </article>
-          <article class="card">
-            <h3>Personal Growth</h3>
-            <p>Moving forward with consistency, curiosity and purpose.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="vision">
-      <div class="container">
-        <p class="label">03 — MY VISION</p>
-        <h2>Building my own journey.</h2>
-        <p class="description">
-          My goal is to keep learning, turn ideas into meaningful
-          work and create opportunities through dedication and effort.
-          This is only the beginning of my journey.
-        </p>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <p class="label">04 — CONTACT</p>
-        <h2>Let's connect.</h2>
-        <p class="description">
-          You can add your public social media profiles here.
-        </p>
-        <div class="contact">
-          <!-- Replace # with your real profile links -->
-          <a class="btn" href="#">FACEBOOK ↗</a>
-          <a class="btn" href="#">INSTAGRAM ↗</a>
-          <a class="btn" href="mailto:your-email@example.com">EMAIL ↗</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      © <span id="year"></span> Maruf Ahmed. All rights reserved.
+  </section>
+  <section id="vision">
+    <div class="wrap">
+      <div class="section-head"><p class="kicker">03 / My vision</p><div><h2>Keep it simple.<br>Keep it real.</h2></div></div>
+      <p class="quote">“Success is not only about how far you go, but also about the person you become along the way.” <span>— A reminder to myself.</span></p>
     </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+  </section>
+  <section id="contact">
+    <div class="wrap contact-row">
+      <div><p class="kicker">04 / Contact</p><h2 style="margin-top:12px">Let’s connect.</h2><p class="section-copy" style="margin-top:12px">Have an idea or want to say hello? Find me on social media.</p></div>
+      <div class="actions"><a class="btn primary" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a class="btn" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> Maruf Ahmed</span><span>Designed with purpose · Black & white</span></div></footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
